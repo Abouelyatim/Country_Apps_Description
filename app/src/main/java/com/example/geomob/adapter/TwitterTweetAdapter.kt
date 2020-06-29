@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.geomob.R
 import com.google.android.material.card.MaterialCardView
@@ -26,6 +27,8 @@ class TwitterTweetAdapter(): RecyclerView.Adapter<TwitterTweetAdapter.TwitterTwe
         internal val  web_view: WebView =itemView.findViewById(R.id.web_view_twitter)
         internal val  source_item: ImageView =itemView.findViewById(R.id.source_item)
         internal val card: MaterialCardView =itemView.findViewById(R.id.card_twitter)
+        internal val front=itemView.findViewById<LinearLayout>(R.id.linearLayoutFront)
+
         init {
 
             /*itemView.setOnClickListener(View.OnClickListener {
@@ -72,17 +75,21 @@ class TwitterTweetAdapter(): RecyclerView.Adapter<TwitterTweetAdapter.TwitterTwe
     override fun onBindViewHolder(holder: TwitterTweetHolder, position: Int) {
         val currentSpiderItemList: String = twitterTweetList.get(position)
 
+        holder.front.bringToFront()
         holder.web_view.setOnTouchListener(object :View.OnTouchListener{
             override fun onTouch(v: View?, event: MotionEvent?): Boolean {
                 return true
             }
         })
             holder.source_item.setImageResource(R.drawable.ic_twitter)
-            holder.web_view.loadDataWithBaseURL("https://twitter.com","<blockquote class=\"twitter-tweet\">\n" +
+           /* holder.web_view.loadDataWithBaseURL("https://twitter.com","<blockquote class=\"twitter-tweet\">\n" +
                     "   <p lang=\"en\" dir=\"ltr\"> <a href=\"https://t.co/sAcZtUUtB8\"></a></p>\n" +
                     " <a href=\""+currentSpiderItemList+"\"></a>\n" +
                     "</blockquote>\n" +
-                    "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>","text/html","utf-8","")
+                    "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>","text/html","utf-8","")*/
+
+        holder.web_view.loadUrl(currentSpiderItemList)
+        holder.web_view.isVerticalScrollBarEnabled=true
 
         /*if(twitterTweetList.size<2){
             val layoutParams: FrameLayout.LayoutParams

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -127,6 +128,7 @@ class CountryActivity : AppCompatActivity() {
                 stopBtn.imageAlpha = 50
             }
         }
+
 
 
         val recyclerViewYoutube: RecyclerView = youtube_list as RecyclerView

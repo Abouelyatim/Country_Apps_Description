@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
                     "https://www.youtube.com/embed/ejqtUtKBptU"
                 ),
                 listOf(
-                    "https://twitter.com/Discover_DZ/status/1277593323516149762",
-                    "https://twitter.com/Discover_DZ/status/1276874236653719552"
+                    "https://twitter.com/search?q=algerie%20algeria%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1&f=live"
                 )
             ),
             Country(
@@ -68,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 ),
                 "https://upload.wikimedia.org/wikipedia/commons/c/c8/Marcha_Real-Royal_March_by_US_Navy_Band.ogg",
                 listOf("https://www.youtube.com/embed/svdq1BWl4r8"),
-                listOf("https://twitter.com/Discover_DZ/status/1277593323516149762")
+                listOf("https://twitter.com/search?q=Spain%20Espa%C3%B1a%20Espagne&src=typed_query&f=live")
             ),
             Country(
                 3,
@@ -86,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                 ),
                 "https://upload.wikimedia.org/wikipedia/commons/3/3f/National_Anthem_of_Morocco.ogg",
                 listOf("https://www.youtube.com/embed/svdq1BWl4r8"),
-                listOf("https://twitter.com/Discover_DZ/status/1277593323516149762")
+                listOf("https://twitter.com/search?q=Morocco%20Maroc%20%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8&src=typed_query&f=live")
             ),
             Country(
                 4,
@@ -105,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                 ),
                 "https://upload.wikimedia.org/wikipedia/commons/4/41/National_Anthem_of_Russia_%282000%29%2C_instrumental%2C_one_verse.ogg",
                 listOf("https://www.youtube.com/embed/svdq1BWl4r8"),
-                listOf("https://twitter.com/Discover_DZ/status/1277593323516149762")
+                listOf("https://twitter.com/search?q=Russia%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&src=typed_query&f=live")
             ),
             Country(
                 5,
@@ -122,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                 ),
                 "https://upload.wikimedia.org/wikipedia/commons/5/50/IstiklalMarsi-2013.ogg",
                 listOf("https://www.youtube.com/embed/svdq1BWl4r8"),
-                listOf("https://twitter.com/Discover_DZ/status/1277593323516149762")
+                listOf("https://twitter.com/search?q=Turkey%20T%C3%BCrkiye%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A7&src=typed_query&f=live")
             )
         )
     }

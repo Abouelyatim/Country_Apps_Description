@@ -17,46 +17,51 @@
     app:cardElevation="0dp"
     android:background="@color/greyBackbround">
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/source_item"
-            android:src="@drawable/ic_twitter"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="center"
 
-            />
 
-        <View
+        <LinearLayout
+            android:id="@+id/linearLayoutFront"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#54787575"
-            android:layout_marginBottom="5dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/source_item"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_twitter"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#54787575" />
 
 
+        </LinearLayout>
 
         <WebView
             android:id="@+id/web_view_twitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="200dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginLeft="2dp"
-            tools:ignore="WebViewLayout">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints,WebViewLayout"
+            tools:layout_editor_absoluteY="-45dp">
 
         </WebView>
 
-
-    </LinearLayout>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </com.google.android.material.card.MaterialCardView>
